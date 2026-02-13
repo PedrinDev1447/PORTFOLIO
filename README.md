@@ -1,82 +1,46 @@
 <div align="center">
-  
-# 🚀 Portfólio - Pedro Lucas
 
-[![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+# 💻 Meu Portfólio
 
-<p align="center">
-  <strong>Portfólio pessoal desenvolvido com Angular 19, apresentando meus projetos, habilidades e experiências como desenvolvedor Full Stack.</strong>
-</p>
+![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=for-the-badge&logo=hostinger&logoColor=white)
 
-[🌐 Ver Demo](https://sienna-finch-743619.hostingersite.com) · [📧 Contato](mailto:seuemail@email.com) · [💼 LinkedIn](https://linkedin.com/in/seu-perfil)
+**Um portfólio moderno com animações CSS puras e design responsivo.**
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="linha" width="100%">
+[🌐 Ver Projeto](https://pedrolucas.cloud/) · [📫 Contato](pedrolucas.bezerra1447@gmail.com)
 
 </div>
 
-## 📋 Índice
-
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias](#-tecnologias)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação](#-instalação)
-- [Scripts Disponíveis](#-scripts-disponíveis)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Deploy](#-deploy)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
-- [Contato](#-contato)
+---
 
 ## 🎯 Sobre o Projeto
 
-Este portfólio foi desenvolvido para apresentar minha trajetória profissional, projetos desenvolvidos e habilidades técnicas. O objetivo é proporcionar uma experiência moderna, responsiva e interativa para visitantes e potenciais recrutadores.
+Portfólio pessoal desenvolvido com **Angular 19**, apresentando projetos, habilidades e experiências profissionais com um design moderno e interativo.
 
 ### ✨ Destaques
 
-- 🎨 **Design Moderno** - Interface elegante com tema dark e efeitos visuais
-- 📱 **Responsivo** - Adaptado para todos os dispositivos
-- ⚡ **Performance** - Otimizado para carregamento rápido
-- 🔄 **SPA** - Single Page Application com navegação fluida
-- 🌐 **SEO Friendly** - Otimizado para mecanismos de busca
+- 🖥️ **Terminal Hacker** animado no footer (CSS puro)
+- ⚡ **Animações fluidas** com keyframes
+- 📱 **100% Responsivo** para todos os dispositivos
+- 🎨 **Design moderno** com tema escuro
 
-## 🚀 Funcionalidades
+---
 
-- [x] Página inicial com apresentação pessoal
-- [x] Seção de projetos com filtros por categoria
-- [x] Animações suaves e interativas
-- [x] Formulário de contato
-- [x] Links para redes sociais
-- [x] Design responsivo
-- [x] Tema dark moderno
+## 🛠️ Tecnologias
 
-## 🛠 Tecnologias
+<div align="center">
 
-As principais tecnologias utilizadas no desenvolvimento:
+|  Frontend  |  Estilização  |  Animações  |  Deploy  |
+|:----------:|:-------------:|:-----------:|:--------:|
+| Angular 19 | SCSS/Sass     | CSS Keyframes | Hostinger |
+| TypeScript | CSS Grid      | Transitions | Apache    |
+| HTML5      | Flexbox       | Hover Effects | GZIP     |
 
-### Frontend
-| Tecnologia | Versão | Descrição |
-|------------|--------|-----------|
-| **Angular** | 19.x | Framework principal |
-| **TypeScript** | 5.x | Linguagem de programação |
-| **SCSS** | - | Pré-processador CSS |
-| **Phosphor Icons** | - | Biblioteca de ícones |
+</div>
 
-### Ferramentas
-| Ferramenta | Descrição |
-|------------|-----------|
-| **Angular CLI** | Scaffolding e build |
-| **Git** | Controle de versão |
-| **VS Code** | Editor de código |
-| **Hostinger** | Hospedagem |
+### 📦 Bibliotecas
 
-## 📦 Pré-requisitos
+- **Phosphor Icons** - Ícones modernos (duotone e fill)
 
-Antes de começar, certifique-se de ter instalado:
-
-- **Node.js** (versão 18.x ou superior)
-  ```bash
-  node --version
