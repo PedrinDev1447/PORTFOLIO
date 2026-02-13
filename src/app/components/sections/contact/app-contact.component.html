@@ -1,0 +1,221 @@
+﻿<section class="contact">
+
+  <!-- Header da Seção -->
+  <div class="contact__header">
+    <span class="section-tag">
+      <i class="ph ph-envelope-simple"></i>
+      Contato
+    </span>
+    <h1 class="section-title">
+      Vamos <span class="highlight">Conversar</span>?
+    </h1>
+    <p class="section-description">
+      Tem um projeto em mente ou quer trocar uma ideia? 
+      Ficarei feliz em ouvir você!
+    </p>
+  </div>
+
+  <!-- Container Principal -->
+  <div class="contact__container">
+
+    <!-- Formulário -->
+    <div class="contact__form-wrapper">
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-header">
+          <h2>Envie uma mensagem</h2>
+          <p>Preencha o formulário abaixo e responderei em breve.</p>
+        </div>
+
+        <!-- Nome -->
+        <div class="form-group">
+          <label for="name">
+            <i class="ph ph-user"></i>
+            Nome Completo
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            formControlName="name" 
+            placeholder="Seu nome completo"
+            [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+          >
+          @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+            <span class="error-message">
+              <i class="ph ph-warning"></i>
+              Nome deve ter pelo menos 3 caracteres
+            </span>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">
+            <i class="ph ph-envelope"></i>
+            E-mail
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            placeholder="seu@email.com"
+            [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+          >
+          @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+            <span class="error-message">
+              <i class="ph ph-warning"></i>
+              Digite um e-mail válido
+            </span>
+          }
+        </div>
+
+        <!-- Assunto -->
+        <div class="form-group">
+          <label for="subject">
+            <i class="ph ph-chat-text"></i>
+            Assunto
+          </label>
+          <input 
+            type="text" 
+            id="subject" 
+            formControlName="subject" 
+            placeholder="Assunto da mensagem"
+            [class.error]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+          >
+          @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+            <span class="error-message">
+              <i class="ph ph-warning"></i>
+              Assunto deve ter pelo menos 5 caracteres
+            </span>
+          }
+        </div>
+
+        <!-- Mensagem -->
+        <div class="form-group">
+          <label for="message">
+            <i class="ph ph-text-align-left"></i>
+            Mensagem
+          </label>
+          <textarea 
+            id="message" 
+            formControlName="message" 
+            placeholder="Escreva sua mensagem aqui..."
+            rows="5"
+            [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+          ></textarea>
+          @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+            <span class="error-message">
+              <i class="ph ph-warning"></i>
+              Mensagem deve ter pelo menos 10 caracteres
+            </span>
+          }
+        </div>
+
+        <!-- Botão Submit -->
+        <button 
+          type="submit" 
+          class="submit-btn"
+          [disabled]="contactForm.invalid || isLoading"
+          [class.disabled]="contactForm.invalid"
+          [class.loading]="isLoading"
+        >
+          @if (isLoading) {
+            <span>Enviando...</span>
+            <i class="ph ph-spinner"></i>
+          } @else {
+            <span>Enviar Mensagem</span>
+            <i class="ph ph-paper-plane-tilt"></i>
+          }
+        </button>
+
+        <!-- Mensagem de Status -->
+        @if (messageStatus === 'success') {
+          <div class="status-message success">
+            <i class="ph ph-check-circle"></i>
+            <span>Mensagem enviada com sucesso! Responderei em breve.</span>
+          </div>
+        }
+
+        @if (messageStatus === 'error') {
+          <div class="status-message error">
+            <i class="ph ph-x-circle"></i>
+            <span>Erro ao enviar. Tente novamente ou me contate pelo WhatsApp.</span>
+          </div>
+        }
+
+      </form>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="contact__info">
+      
+      <!-- Card Email -->
+      <a href="mailto:pedrolucas.bezerra14471@gmail.com" class="info-card">
+        <div class="info-card__icon">
+          <i class="ph-duotone ph-envelope"></i>
+        </div>
+        <div class="info-card__content">
+          <h3>E-mail</h3>
+          <p>pedrolucas.bezerra14471@gmail.com</p>
+        </div>
+        <i class="ph ph-arrow-right info-card__arrow"></i>
+      </a>
+
+      <!-- Card Telefone -->
+      <a href="https://wa.me/5511951770664" target="_blank" class="info-card">
+        <div class="info-card__icon info-card__icon--green">
+          <i class="ph-duotone ph-whatsapp-logo"></i>
+        </div>
+        <div class="info-card__content">
+          <h3>WhatsApp</h3>
+          <p>+55 (11) 95177-0664</p>
+        </div>
+        <i class="ph ph-arrow-right info-card__arrow"></i>
+      </a>
+
+      <!-- Card Localização -->
+      <div class="info-card info-card--static">
+        <div class="info-card__icon info-card__icon--orange">
+          <i class="ph-duotone ph-map-pin"></i>
+        </div>
+        <div class="info-card__content">
+          <h3>Localização</h3>
+          <p>São Paulo, SP - Brasil</p>
+        </div>
+      </div>
+
+      <!-- Card LinkedIn -->
+      <a href="https://www.linkedin.com/in/pedro-lucas-bezerra" target="_blank" class="info-card">
+        <div class="info-card__icon info-card__icon--blue">
+          <i class="ph-duotone ph-linkedin-logo"></i>
+        </div>
+        <div class="info-card__content">
+          <h3>LinkedIn</h3>
+          <p>Conecte-se comigo</p>
+        </div>
+        <i class="ph ph-arrow-right info-card__arrow"></i>
+      </a>
+
+      <!-- Card GitHub -->
+      <a href="https://github.com/PedrinDev1447" target="_blank" class="info-card">
+        <div class="info-card__icon info-card__icon--purple">
+          <i class="ph-duotone ph-github-logo"></i>
+        </div>
+        <div class="info-card__content">
+          <h3>GitHub</h3>
+          <p>Veja meus projetos</p>
+        </div>
+        <i class="ph ph-arrow-right info-card__arrow"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Background -->
+  <div class="contact__bg">
+    <div class="gradient-orb gradient-orb--1"></div>
+    <div class="gradient-orb gradient-orb--2"></div>
+  </div>
+
+</section>

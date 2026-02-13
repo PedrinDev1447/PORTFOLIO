@@ -1,0 +1,185 @@
+﻿<section class="projects">
+
+  <!-- Header da Seção -->
+  <div class="projects__header">
+    <div class="projects__header-content">
+      <span class="section-tag">
+        <i class="ph ph-folder-notch-open"></i>
+        Portfólio
+      </span>
+      <h1 class="section-title">
+        Meus <span class="highlight">Projetos</span>
+      </h1>
+      <p class="section-description">
+        Uma seleção dos trabalhos que desenvolvi, desde APIs robustas até
+        aplicações web completas e sistemas de automação.
+      </p>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <div class="projects__filters">
+    <button
+      class="filter-btn"
+      [class.active]="activeFilter === 'all'"
+      (click)="filterProjects('all')">
+      <i class="ph ph-squares-four"></i>
+      Todos
+    </button>
+    <button
+      class="filter-btn"
+      [class.active]="activeFilter === 'backend'"
+      (click)="filterProjects('backend')">
+      <i class="ph ph-database"></i>
+      Backend
+    </button>
+    <button
+      class="filter-btn"
+      [class.active]="activeFilter === 'fullstack'"
+      (click)="filterProjects('fullstack')">
+      <i class="ph ph-stack"></i>
+      Full Stack
+    </button>
+    <button
+      class="filter-btn"
+      [class.active]="activeFilter === 'automation'"
+      (click)="filterProjects('automation')">
+      <i class="ph ph-gear"></i>
+      Automação
+    </button>
+    <button
+      class="filter-btn"
+      [class.active]="activeFilter === 'data'"
+      (click)="filterProjects('data')">
+      <i class="ph ph-chart-line"></i>
+      Data Science
+    </button>
+  </div>
+
+  <!-- Carrossel de Projetos -->
+  <div 
+    class="carousel"
+    (mouseenter)="onCarouselEnter()"
+    (mouseleave)="onCarouselLeave()">
+
+    <!-- Navegação Esquerda -->
+    <button class="carousel__nav carousel__nav--prev" (click)="prevSlide()">
+      <i class="ph ph-caret-left"></i>
+    </button>
+
+    <!-- Container dos Slides -->
+    <div class="carousel__container">
+      <div 
+        class="carousel__track"
+        [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+
+        @for (project of filteredProjects; track project.id; let i = $index) {
+          <article class="carousel__slide">
+            <div class="project-card" [class.featured]="project.featured">
+
+              <!-- Imagem do Projeto -->
+              <div class="project-card__image">
+                <div class="image-gradient" [style.background]="project.gradient"></div>
+                <i [class]="project.icon" class="project-icon"></i>
+                @if (project.featured) {
+                  <span class="featured-badge">
+                    <i class="ph ph-star-fill"></i>
+                    Destaque
+                  </span>
+                }
+              </div>
+
+              <!-- Conteúdo do Card -->
+              <div class="project-card__content">
+
+                <span class="project-category">{{ project.category }}</span>
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-description">{{ project.description }}</p>
+
+                <div class="project-stack">
+                  @for (tech of project.technologies; track tech) {
+                    <span class="tech-tag">{{ tech }}</span>
+                  }
+                </div>
+
+                <div class="project-links">
+                  @if (project.demoUrl) {
+                    <a [href]="project.demoUrl" target="_blank" class="link-btn link-btn--primary">
+                      <i class="ph ph-play-circle"></i>
+                      <span>{{ project.demoText || 'Ver Demo' }}</span>
+                    </a>
+                  }
+                  @if (project.repoUrl) {
+                    <a [href]="project.repoUrl" target="_blank" class="link-btn link-btn--secondary">
+                      <i class="ph ph-code"></i>
+                      <span>Código</span>
+                    </a>
+                  }
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+        }
+
+      </div>
+    </div>
+
+    <!-- Navegação Direita -->
+    <button class="carousel__nav carousel__nav--next" (click)="nextSlide()">
+      <i class="ph ph-caret-right"></i>
+    </button>
+
+  </div>
+
+  <!-- Indicadores e Controles -->
+  <div class="carousel__controls">
+    
+    <!-- Indicadores (Dots) -->
+    <div class="carousel__indicators">
+      @for (project of filteredProjects; track project.id; let i = $index) {
+        <button
+          class="indicator"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)">
+        </button>
+      }
+    </div>
+
+    <!-- Botão Auto Play -->
+    <button class="autoplay-btn" (click)="toggleAutoPlay()">
+      <i [class]="isAutoPlaying ? 'ph ph-pause' : 'ph ph-play'"></i>
+      <span>{{ isAutoPlaying ? 'Pausar' : 'Reproduzir' }}</span>
+    </button>
+
+  </div>
+
+  <!-- Contador de Slides -->
+  <div class="carousel__counter">
+    <span class="current">{{ currentSlide + 1 }}</span>
+    <span class="separator">/</span>
+    <span class="total">{{ filteredProjects.length }}</span>
+  </div>
+
+  <!-- CTA Final -->
+  <div class="projects__cta">
+    <div class="cta-content">
+      <i class="ph-duotone ph-github-logo"></i>
+      <h3>Quer ver mais projetos?</h3>
+      <p>Confira meu GitHub para mais repositórios e contribuições open source.</p>
+      <a href="https://github.com/PedrinDev1447" target="_blank" class="cta-btn">
+        <i class="ph ph-github-logo"></i>
+        <span>Ver GitHub Completo</span>
+        <i class="ph ph-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Background -->
+  <div class="projects__bg">
+    <div class="gradient-orb gradient-orb--1"></div>
+    <div class="gradient-orb gradient-orb--2"></div>
+  </div>
+
+</section>

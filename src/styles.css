@@ -1,0 +1,191 @@
+﻿/* ===== RESET E VARIÁVEIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* TEMA ROCKET - Cores principais */
+  --dark-primary: #0F1B26;
+  --light-cream: #F2E3D5;
+  --medium-rose: #D9AC9C;
+  --dark-rose: #A6756A;
+  --almost-black: #0D0D0D;
+  
+  /* Cores de destaque */
+  --primary: #D9AC9C;
+  --primary-dark: #A6756A;
+  --secondary: #F2E3D5;
+  --accent: #D9AC9C;
+  
+  /* Backgrounds */
+  --dark: #0F1B26;
+  --dark-light: #1a2a38;
+  --dark-card: #162330;
+  
+  /* Textos */
+  --white: #F2E3D5;
+  --gray: #D9AC9C;
+  --text-muted: #A6756A;
+  
+  /* Gradientes com as cores do tema */
+  --gradient: linear-gradient(135deg, #D9AC9C 0%, #A6756A 100%);
+  --gradient-accent: linear-gradient(135deg, #F2E3D5 0%, #D9AC9C 100%);
+  --gradient-dark: linear-gradient(135deg, #0F1B26 0%, #1a2a38 100%);
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(217, 172, 156, 0.1);
+  --shadow-md: 0 4px 16px rgba(217, 172, 156, 0.15);
+  --shadow-lg: 0 8px 32px rgba(217, 172, 156, 0.2);
+  --shadow-glow: 0 0 30px rgba(217, 172, 156, 0.3);
+  
+  /* Transições */
+  --transition: all 0.3s ease;
+}
+
+/* ===== ESTILOS GERAIS ===== */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--dark);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+p {
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+  min-height: 100vh;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: var(--dark);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, #F2E3D5 0%, #D9AC9C 100%);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(217, 172, 156, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(217, 172, 156, 0.6);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ===== SCROLLBAR CUSTOMIZADA ===== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+}
+

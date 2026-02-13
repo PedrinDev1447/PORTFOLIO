@@ -1,0 +1,119 @@
+// ============================================
+// VARIÁVEIS GLOBAIS - TEMA TECH B&W
+// ============================================
+
+// ============================================
+// CORES PRIMÁRIAS
+// ============================================
+
+$primary: #6366f1;
+$primary-light: #818cf8;
+$primary-dark: #4f46e5;
+
+// ============================================
+// BACKGROUNDS
+// ============================================
+
+$bg-primary: #0a0a0f;
+$bg-secondary: #1e293b;
+
+// ============================================
+// TEXTOS
+// ============================================
+
+$text-white: #f8fafc;
+$text-gray-300: #cbd5e1;
+$text-gray-400: #94a3b8;
+
+// ============================================
+// BORDAS
+// ============================================
+
+$border-color: rgba(255, 255, 255, 0.1);
+
+// === CORES ===
+$bg-primary: #000000;
+$bg-secondary: #0a0a0a;
+$bg-card: #111111;
+$bg-card-hover: #1a1a1a;
+
+$text-white: #ffffff;
+$text-gray-100: #f5f5f5;
+$text-gray-300: #d4d4d4;
+$text-gray-400: #a3a3a3;
+$text-gray-500: #737373;
+$text-gray-600: #525252;
+
+$border-color: rgba(255, 255, 255, 0.1);
+$border-color-hover: rgba(255, 255, 255, 0.2);
+
+// === FONTES ===
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-heading: 'Poppins', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+// === TAMANHOS DE FONTE ===
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 1.875rem,
+  '4xl': 2.25rem,
+  '5xl': 3rem
+);
+
+// === ESPAÇAMENTOS ===
+$spacings: (
+  'xs': 4px,
+  'sm': 8px,
+  'md': 16px,
+  'lg': 24px,
+  'xl': 32px,
+  '2xl': 48px,
+  '3xl': 64px,
+  '4xl': 96px
+);
+
+// === BREAKPOINTS ===
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  '2xl': 1400px
+);
+
+// === BORDER RADIUS ===
+$radius: (
+  'sm': 4px,
+  'md': 8px,
+  'lg': 12px,
+  'xl': 16px,
+  '2xl': 24px,
+  'full': 9999px
+);
+
+// === TRANSIÇÕES ===
+$transition-fast: 150ms ease;
+$transition-normal: 300ms ease;
+$transition-slow: 500ms ease;
+
+// === FUNÇÕES HELPER ===
+@function space($key) {
+  @return map-get($spacings, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function radius($key) {
+  @return map-get($radius, $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}

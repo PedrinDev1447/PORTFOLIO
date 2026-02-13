@@ -1,0 +1,251 @@
+﻿<section class="cards-section" id="servicos">
+  <div class="container">
+    
+    <!-- Header da Seção -->
+    <header class="section-header">
+      <span class="section-badge">
+        <i class="ph ph-sparkle"></i>
+        O que eu faço
+      </span>
+      <h2 class="section-title">Meus Serviços</h2>
+      <p class="section-subtitle">
+        Soluções completas em desenvolvimento de software, 
+        do backend robusto à interface elegante
+      </p>
+    </header>
+
+    <!-- Grid de Cards -->
+    <div class="cards-grid">
+      
+      <!-- Card 1: Backend -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+         <div class="card__icon card__icon--blue">
+            <i class="ph-duotone ph-terminal"></i>
+          </div>
+          <h3 class="card__title">Desenvolvimento Backend</h3>
+          <p class="card__description">
+            APIs REST robustas e escaláveis com Java, Spring Boot e 
+            arquitetura de microsserviços. Foco em performance e segurança.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">Java</li>
+            <li class="tag">Spring Boot</li>
+            <li class="tag">PostgreSQL</li>
+          </ul>
+          <button class="card__link" (click)="openModal('backend')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2: Frontend -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+          <div class="card__icon card__icon--purple">
+            <i class="ph-duotone ph-browser"></i>
+          </div>
+          <h3 class="card__title">Interfaces Modernas</h3>
+          <p class="card__description">
+            Criação de interfaces responsivas e acessíveis com Angular e React. 
+            Design system consistente e experiência do usuário otimizada.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">Angular</li>
+            <li class="tag">React</li>
+            <li class="tag">TypeScript</li>
+          </ul>
+          <button class="card__link" (click)="openModal('frontend')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3: DevOps -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+          <div class="card__icon card__icon--teal">
+            <i class="ph-duotone ph-cloud"></i>
+          </div>
+          <h3 class="card__title">DevOps & Cloud</h3>
+          <p class="card__description">
+            Containerização com Docker, CI/CD pipelines e deploy automatizado. 
+            Infraestrutura como código e monitoramento.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">Docker</li>
+            <li class="tag">Git</li>
+            <li class="tag">CI/CD</li>
+          </ul>
+          <button class="card__link" (click)="openModal('devops')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 4: Banco de Dados -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+          <div class="card__icon card__icon--amber">
+            <i class="ph-duotone ph-hard-drives"></i>
+          </div>
+          <h3 class="card__title">Banco de Dados</h3>
+          <p class="card__description">
+            Modelagem eficiente, queries otimizadas e migrations automatizadas. 
+            Expertise em SQL e NoSQL para diferentes cenários.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">MySQL</li>
+            <li class="tag">MongoDB</li>
+          </ul>
+          <button class="card__link" (click)="openModal('database')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 5: Automação -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+          <div class="card__icon card__icon--rose">
+            <i class="ph-duotone ph-robot"></i>
+          </div>
+          <h3 class="card__title">Automação & IA</h3>
+          <p class="card__description">
+            Scripts automatizados, integração de IA generativa e 
+            soluções inteligentes para otimizar processos repetitivos.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">Python</li>
+            <li class="tag">Node-Red</li>
+            <li class="tag">IA</li>
+          </ul>
+          <button class="card__link" (click)="openModal('automation')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 6: Consultoria -->
+      <article class="card card--service">
+        <div class="card__glow"></div>
+        <div class="card__content">
+          <div class="card__icon card__icon--emerald">
+            <i class="ph-duotone ph-chats-circle"></i>
+          </div>
+          <h3 class="card__title">Consultoria Técnica</h3>
+          <p class="card__description">
+            Análise de arquitetura, code review e mentoria técnica. 
+            Auxílio na tomada de decisões tecnológicas estratégicas.
+          </p>
+          <ul class="card__tags">
+            <li class="tag">Arquitetura</li>
+            <li class="tag">Code Review</li>
+            <li class="tag">Mentoria</li>
+          </ul>
+          <button class="card__link" (click)="openModal('consulting')">
+            Saiba mais
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Background Decorations -->
+  <div class="section-bg-decoration">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+  </div>
+
+  <!-- SVG Gradients -->
+  <svg width="0" height="0" class="svg-defs">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#3b82f6"/>
+        <stop offset="100%" style="stop-color:#1d4ed8"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</section>
+
+<!-- ============================================ -->
+<!-- MODAL DE DETALHES DO SERVIÇO -->
+<!-- ============================================ -->
+@if (isModalOpen && selectedService) {
+  <div 
+    class="modal-overlay" 
+    [class.is-open]="isModalOpen"
+    (click)="onOverlayClick($event)"
+    (keydown)="onKeydown($event)"
+    tabindex="0"
+  >
+    <div class="modal">
+      <!-- Header do Modal -->
+      <div class="modal__header">
+        <div class="modal__icon" [ngClass]="'modal__icon--' + selectedService.iconColor">
+          <i [class]="selectedService.icon"></i>
+        </div>
+        <div class="modal__title-group">
+          <h2 class="modal__title">{{ selectedService.title }}</h2>
+          <p class="modal__description">{{ selectedService.description }}</p>
+        </div>
+        <button class="modal__close" (click)="closeModal()">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+
+      <!-- Conteúdo do Modal -->
+      <div class="modal__content">
+        <h3 class="modal__subtitle">
+          <i class="ph ph-chart-bar"></i>
+          Minhas Skills
+        </h3>
+        
+        <div class="skills-list">
+          @for (skill of selectedService.skills; track skill.name) {
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div 
+                  class="skill-progress" 
+                  [style.width.%]="skill.level"
+                  [ngClass]="'skill-progress--' + selectedService.iconColor"
+                ></div>
+              </div>
+              <p class="skill-description">{{ skill.description }}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Footer do Modal -->
+      <div class="modal__footer">
+        <button class="modal__btn modal__btn--secondary" (click)="closeModal()">
+          <i class="ph ph-arrow-left"></i>
+          Voltar
+        </button>
+        <a href="#contact" class="modal__btn modal__btn--primary" (click)="closeModal()">
+          <i class="ph ph-paper-plane-tilt"></i>
+          Entrar em Contato
+        </a>
+      </div>
+    </div>
+  </div>
+}

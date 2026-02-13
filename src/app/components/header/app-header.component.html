@@ -1,0 +1,122 @@
+﻿<header class="header" [class.header--scrolled]="isScrolled">
+  <div class="header__container">
+    
+    <!-- Logo -->
+    <a (click)="scrollToSection('home')" class="header__logo">
+      <div class="logo__icon">
+        <i class="ph-duotone ph-code"></i>
+      </div>
+      <span class="logo__text">
+        <span class="logo__name">Pedro</span>
+        <span class="logo__dot">.</span>
+        <span class="logo__dev">dev</span>
+      </span>
+    </a>
+
+    <!-- Navegação Desktop -->
+    <nav class="header__nav">
+      <a 
+        (click)="scrollToSection('home')"
+        [class.nav-link--active]="activeSection === 'home'"
+        class="nav-link"
+      >
+        <i class="ph ph-house"></i>
+        <span>Home</span>
+      </a>
+      <a 
+        (click)="scrollToSection('about')"
+        [class.nav-link--active]="activeSection === 'about'"
+        class="nav-link"
+      >
+        <i class="ph ph-user"></i>
+        <span>Sobre</span>
+      </a>
+      <a 
+        (click)="scrollToSection('projects')"
+        [class.nav-link--active]="activeSection === 'projects'"
+        class="nav-link"
+      >
+        <i class="ph ph-folder-notch"></i>
+        <span>Projetos</span>
+      </a>
+      <a 
+        (click)="scrollToSection('contact')"
+        [class.nav-link--active]="activeSection === 'contact'"
+        class="nav-link"
+      >
+        <i class="ph ph-envelope"></i>
+        <span>Contato</span>
+      </a>
+    </nav>
+
+    <!-- CTA Button -->
+    <a (click)="scrollToSection('contact')" class="header__cta">
+      <i class="ph ph-paper-plane-tilt"></i>
+      <span>Fale Comigo</span>
+    </a>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <button 
+      class="header__hamburger" 
+      [class.is-active]="isMobileMenuOpen"
+      (click)="toggleMobileMenu()"
+      aria-label="Menu"
+    >
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.is-open]="isMobileMenuOpen">
+    <nav class="mobile-menu__nav">
+      <a 
+        (click)="scrollToSection('home')"
+        [class.mobile-link--active]="activeSection === 'home'"
+        class="mobile-link"
+      >
+        <i class="ph ph-house"></i>
+        <span>Home</span>
+      </a>
+      <a 
+        (click)="scrollToSection('about')"
+        [class.mobile-link--active]="activeSection === 'about'"
+        class="mobile-link"
+      >
+        <i class="ph ph-user"></i>
+        <span>Sobre</span>
+      </a>
+      <a 
+        (click)="scrollToSection('projects')"
+        [class.mobile-link--active]="activeSection === 'projects'"
+        class="mobile-link"
+      >
+        <i class="ph ph-folder-notch"></i>
+        <span>Projetos</span>
+      </a>
+      <a 
+        (click)="scrollToSection('contact')"
+        [class.mobile-link--active]="activeSection === 'contact'"
+        class="mobile-link"
+      >
+        <i class="ph ph-envelope"></i>
+        <span>Contato</span>
+      </a>
+    </nav>
+    
+    <a (click)="scrollToSection('contact')" class="mobile-menu__cta">
+      <i class="ph ph-paper-plane-tilt"></i>
+      <span>Fale Comigo</span>
+    </a>
+  </div>
+
+  <!-- Overlay -->
+  <div 
+    class="mobile-overlay" 
+    [class.is-visible]="isMobileMenuOpen"
+    (click)="closeMobileMenu()"
+  ></div>
+</header>
+

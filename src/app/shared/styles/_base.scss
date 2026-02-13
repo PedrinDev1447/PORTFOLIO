@@ -1,0 +1,109 @@
+// ============================================
+// ESTILOS BASE GLOBAIS
+// ============================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// === RESET ===
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// === HTML & BODY ===
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: font-size('base');
+  line-height: 1.6;
+  color: $text-white;
+  background: $bg-primary;
+  min-height: 100vh;
+}
+
+// === HEADINGS ===
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-white;
+}
+
+// === LINKS ===
+a {
+  color: inherit;
+  text-decoration: none;
+  @include transition(color);
+}
+
+// === IMAGES ===
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// === LISTS ===
+ul, ol {
+  list-style: none;
+}
+
+// === BUTTONS ===
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+// === CODE ===
+code, pre {
+  font-family: $font-mono;
+}
+
+// === SELECTION ===
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: $text-white;
+}
+
+// === SCROLLBAR ===
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $text-gray-600;
+  border-radius: radius('full');
+  
+  &:hover {
+    background: $text-gray-500;
+  }
+}
+
+// === CONTAINER ===
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 space('lg');
+  
+  @include respond-to('sm') {
+    padding: 0 space('md');
+  }
+}
